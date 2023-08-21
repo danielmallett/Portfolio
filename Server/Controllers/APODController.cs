@@ -16,11 +16,8 @@ namespace Portfolio.Server.Controllers{
 
         [HttpGet]
         public async Task<ActionResult> GetRequestAsync(){
-            string ret = "fuck";
-
-            
-            string keyVaultName = Environment.GetEnvironmentVariable("KEY_VAULT_NAME");
-            string kvUri = "https://" + keyVaultName + ".vault.azure.net";
+            string ret = "";
+            string kvUri = "https://DMPortfolioKV.vault.azure.net";
             var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
             var secret = client.GetSecret("APODKEY");
             string key = secret.Value.Value.ToString();
