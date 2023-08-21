@@ -2,6 +2,7 @@
 @using Portfolio.Client.Components
 
 <div class="page">
+
     <div class="spacing"></div>
     <div class="title">
         <div class="title-text">
@@ -12,9 +13,8 @@
                 <i>University of Tennessee - Knoxville, '25</i>
             </p>
         </div>
-
-
     </div>
+
     <div class="content-block">
         <div class="about">
             <div class="card">
@@ -35,16 +35,6 @@
         </div>
 
         <div class="experience">
-            @* <div class="card">
-                <h2>Experience</h2>
-                <p>
-                    I graduated with a Bachelor of Science in Mechanical Engineering from Miami University in 2019. Soon
-                    after, I made an impact as a Project Manager at Schneider Electric.
-                    In 2021 I chose to expand my horizons and pursue my passion for computer science at the University
-                    of Tennessee in Knoxville!
-                </p>
-            </div> *@
-
             <div class="card">
                 <h2>Current Work</h2>
                 <h3>Full Stack Development Intern</h3>
@@ -100,7 +90,7 @@
             <br><br>
             It took some time to find the best solution for securely storing the API key. My original plan for this site was just using Blazor WebAssembly and hosting the site as a static web app. 
             However, due to the nature of Blazor WebAssembly running everything on the client side, there is no real way to securely store secrets like keys, passwords, or certificates. So instead
-            I implemented a minimal API backend to access a key vault using ASP.NET Core. It's a little more complicated but offers a lot more functionality.
+            I implemented an an ASP.NET Core backend to host the Blazor WASM frontend. It's a little more complicated but offers a lot more functionality!
         </p>
         <APOD/>
     </div>
