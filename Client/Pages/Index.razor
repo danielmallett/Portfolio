@@ -1,0 +1,109 @@
+﻿@page "/"
+@using Portfolio.Client.Components
+
+<div class="page">
+    <div class="spacing"></div>
+    <div class="title">
+        <div class="title-text">
+            <h1>Daniel Mallett</h1>
+            <p>
+                <i>Computer Science Undergraduate Student</i>
+                <br>
+                <i>University of Tennessee - Knoxville, '25</i>
+            </p>
+        </div>
+
+
+    </div>
+    <div class="content-block">
+        <div class="about">
+            <div class="card">
+                <h2>About Me</h2>
+                <p>
+                    Hi there! I'm Daniel, a computer science student at the University of Tennessee in Knoxville. I have a
+                    diverse
+                    background in engineering and technology and I'm passonate about computer science and software
+                    development.
+                    <br><br>
+                    In 2019 I graduated from Miami University from Ohio with a Bachelor of Science in Mechanical Engineering.
+                    I gained some professional experience working as a Sales Engineer and a Project Manager before continuing 
+                    my education at UT.
+                    <br><br>
+                    
+                </p>
+            </div>
+        </div>
+
+        <div class="experience">
+            @* <div class="card">
+                <h2>Experience</h2>
+                <p>
+                    I graduated with a Bachelor of Science in Mechanical Engineering from Miami University in 2019. Soon
+                    after, I made an impact as a Project Manager at Schneider Electric.
+                    In 2021 I chose to expand my horizons and pursue my passion for computer science at the University
+                    of Tennessee in Knoxville!
+                </p>
+            </div> *@
+
+            <div class="card">
+                <h2>Current Work</h2>
+                <h3>Full Stack Development Intern</h3>
+                <a href="https://techsolutions.tennessee.edu/">
+                    <h4><i>University of Tennessee</i></h4>
+                </a> 
+                <p>
+                    I currently work at the University of Tennessee in the Department of Technology Solutions as a Full Stack Development Intern. 
+                    I collaborate with a small team of talented developers to create enterprise web applications using C# and Microsoft's .NET framework.
+                    <br><br>
+                    Over this past summer I gained a lot of experience from my work on a Blazor Server application that will be used by UT's Emergency Management Deparment and I'm very proud to have 
+                    written code that will be used in production. I learned a lot about writing web apps in C# by implementing validation, authentication, and authorization features. I was also able to hone
+                    my knowledge of html and css through my work on the site's frontend. I will post the link to the site here when it is up and running!
+                </p>
+                <br>
+                @* <h4>Undergraduate Research Assistant</h4>
+                <a href="https://neuromorphic.eecs.utk.edu/">
+                    <h5><i>TENNLab Neuromorphic</i></h5>
+                </a>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus quaerat iure. Nesciunt at veniam minus molestias vero commodi provident animi placeat ullam deserunt quidem, obcaecati ab molestiae, ipsam dolores!
+                </p> *@
+            </div>
+
+            <div class="card">
+                <h2>Previous Experience</h2>
+                <h3>Information Technology Intern</h3>
+                <a href="https://techsolutions.tennessee.edu/">
+                    <h4><i>University of Tennessee</i></h4>
+                </a> 
+                <p>
+                    The first position I held at the University of Tennessee was an Information Technology Internship in the Deparment of Technology Solutions. 
+                    Before moving to the role of a Full Stack Development Intern, I worked with a team of IT Technicians and Security Engineers to provide technical support for UT Administration staff. 
+                    I gained a lot of experience helping users troubleshoot a wide variety of technical issues involving both hardware and software. 
+                    I learned a lot about information security principles, troubleshooting techniques, and computer networks. 
+                </p>
+                <br>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="projects">
+    <div class="feature-project-card">
+        <h2>Featured Project</h2>
+        <h3>NASA API Call - Astronomy Picture of the Day</h3>
+        <br>
+        <p>
+            This summer, I've had the opportunity to learn a lot about web development. I've really enjoyed learning about APIs, understanding their implementation and how to interact with them. 
+            Here, I'm fetching and displaying NASA's Astronomy Picture of the Day through a simple API call! 
+            <br><br>
+            It took some time to find the best solution for securely storing the API key. My original plan for this site was just using Blazor WebAssembly and hosting the site as a static web app. 
+            However, due to the nature of Blazor WebAssembly running everything on the client side, there is no real way to securely store secrets like keys, passwords, or certificates. So instead
+            I implemented a minimal API backend to access a key vault using ASP.NET Core. It's a little more complicated but offers a lot more functionality.
+        </p>
+        <APOD/>
+    </div>
+    <div class="spacing"></div>
+    <div class="spacing"></div>
+</div>

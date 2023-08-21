@@ -1,0 +1,13 @@
+@* NASA Astoronomy Picture of the Day *@
+@inject HttpClient HttpClient
+@using System.Net.Http.Json
+
+<img src="@apod.HDURL" alt="Astronomy Picture of the Day">
+<p><i>@apod.Explanation</i></p>
+
+@code{
+    APODModel apod = new();
+    protected override async Task OnInitializedAsync(){
+        apod = await HttpClient.GetFromJsonAsync<APODModel>("api/APOD");
+    }
+}
