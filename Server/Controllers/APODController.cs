@@ -17,23 +17,15 @@ namespace Portfolio.Server.Controllers{
         [HttpGet]
         public async Task<ActionResult> GetRequestAsync(){
 
-            try{
-                string ret = "";
-                string kvUri = "https://DMPortfolioKV.vault.azure.net";
-                var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
-                var secret = client.GetSecret("APODKEY");
-                string key = secret.Value.Value.ToString();
-
-                using (HttpClient httpClient = new HttpClient()){
-                    ret = await httpClient.GetStringAsync("https://api.nasa.gov/planetary/apod?api_key=" + key);
-                }
-                return Ok(ret);
+            string ret = "";
+            string kvUri = "https://DMPortfolioKV.vault.azure.net";
+            var client = new SecretClient(new Uri(kvUri), new DefaultAzureCredential());
+            var secret = client.GetSecret("APODKEY");
+            string key = secret.Value.Value.ToString();
+            using (HttpClient httpClient = new HttpClient()){
+                ret = await httpClient.GetStringAsync("https://api.nasa.gov/planetary/apod?api_key=" + key);
             }
-            
-            catch(HttpRequestException ex){
-                Console.WriteLine(ex);
-                return Ok("no");
-            }
+            return Ok(ret);
         }
     }
 }
