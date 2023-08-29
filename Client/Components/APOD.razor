@@ -2,7 +2,9 @@
 @inject HttpClient HttpClient
 @using System.Net.Http.Json
 
-<img src="@apod.HDURL" alt="Astronomy Picture of the Day"> 
+<a href="@apod.HDURL">
+    <img src="@apod.HDURL" alt="Astronomy Picture of the Day"> 
+</a>
 <p><i>@apod.Explanation</i></p>
 
 @code{
