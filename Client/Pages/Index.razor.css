@@ -24,8 +24,18 @@
     padding: 1rem;
     border-radius: 20px;
     background-image: linear-gradient( 90deg, #f2f6fd 10%, #dde6f3 100%);
-
     box-shadow: 9px 9px 16px rgba(25, 25, 25, 0.6);
+}
+
+.feature-project-card img{
+    border-radius: 10px;
+    margin-left:50%;
+    margin-top: 1rem;
+    transform: translate(-50%, 0);
+}
+
+figcaption{
+    text-align: center;
 }
 
 /* media queries */
