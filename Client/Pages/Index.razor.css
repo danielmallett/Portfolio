@@ -28,10 +28,11 @@
 }
 
 .feature-project-card img{
-    border-radius: 10px;
-    margin-left:50%;
-    margin-top: 1rem;
-    transform: translate(-50%, 0);
+    position: relative;
+    border-radius: 20px;
+    left:50%;
+    transform:translate(-50%, 0);
+    margin-top:1rem;
 }
 
 figcaption{
