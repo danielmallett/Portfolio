@@ -1,3 +1,22 @@
+.project-title{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-title svg{
+    animation: pointdown 1s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes pointdown{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform: translate(0, 10px);
+    }
+}
 .spacing{
     height: 3rem;
 }
